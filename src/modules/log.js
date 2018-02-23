@@ -1,8 +1,10 @@
-function footer() {
-	var element = document.createElement('div');
+function lazyLoading() {
+	var element = document.createElement('h1');
 
 	element.innerHTML = 'Fim: '+ new Date();
 	return element;
 }
 
-document.body.appendChild(footer());
+export default () => {
+	document.body.appendChild(lazyLoading());
+}

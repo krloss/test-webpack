@@ -16,3 +16,11 @@ function component() {
 
 document.head.appendChild(style());
 document.body.appendChild(component());
+
+setTimeout(function() {
+	const module = import(/* webpackChunkName:"log" */'./modules/log.js');
+
+	module.then(log => {
+		log.default();
+	});
+},3000);
