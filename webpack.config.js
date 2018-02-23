@@ -7,5 +7,10 @@ module.exports = {
 	output: {
 		filename:'[name].bundle.js',
 		path:path.resolve(__dirname,'dist/js')
+	},
+	module: {
+		rules: [
+			{ test:/\.css$/, use:'css-loader' }
+		]
 	}
 };

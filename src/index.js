@@ -1,5 +1,12 @@
-import Lodash from 'lodash'
+import MainCSS from './main.css';
+import Lodash from 'lodash';
 
+function style() {
+	var element = document.createElement('style');
+
+	element.innerHTML = MainCSS;
+	return element;
+}
 function component() {
 	var element = document.createElement('div');
 
@@ -7,4 +14,5 @@ function component() {
 	return element;
 }
 
+document.head.appendChild(style());
 document.body.appendChild(component());
